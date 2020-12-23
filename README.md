@@ -38,7 +38,7 @@ node test in bash
 
 ## Status
 
-Project is: in progress
+Project is: Complete
 
 ## Inspiration
 

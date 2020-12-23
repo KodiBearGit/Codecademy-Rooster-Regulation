@@ -1,7 +1,10 @@
 //Construct a test suite
 //1of12 import assert module
 const assert = require('assert');
+//2of12 import Rooster module
 const Rooster = require('../index');
+
+//3of12 create describe function for object
 
 describe('Rooster', () => {
   describe('.announceDawn', () => {
@@ -17,6 +20,14 @@ describe('Rooster', () => {
     });
   });
   describe('timeAtDawn', () => {
+    it('returns its argument as a string', () => {
+      //Setup
+      const expected = 'string';
 
+      //Exercise
+      const actualType = typeof(Rooster.timeAtDawn(4));
+      //verify
+      assert.strictEqual(actualType, expected);
+    });
   });
 });

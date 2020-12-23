@@ -29,5 +29,31 @@ describe('Rooster', () => {
       //verify
       assert.strictEqual(actualType, expected);
     });
+    it('throws an error if passed a number less than 0', () => {
+      //Setup
+      const expectedError = RangeError;
+      //Exercise
+      const hour = -1;
+      //verify
+      assert.throws(
+        () => {
+           Rooster.timeAtDawn(hour);
+        },
+        expectedError
+      );
+    });
+    it('throws an error if passed a number greater than 23', () => {
+      //Setup
+      const expectedError = RangeError;
+      //Exercise
+      const hour = 24;
+      //verify
+      assert.throws(
+        () => {
+           Rooster.timeAtDawn(hour);
+        },
+        expectedError
+      );
+    });
   });
 });
